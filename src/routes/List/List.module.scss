@@ -1,0 +1,46 @@
+.ctrl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &>div {
+    align-self: center;
+  }
+
+  &>div button {
+    background: #1c1b1b;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid silver;
+  padding: 15px 0;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    display: inline-block;
+    font-size: 13px;
+    width: 100px;
+  }
+}
+
+.links a {
+  margin-left: 15px;
+}

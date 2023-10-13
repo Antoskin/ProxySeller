@@ -1,0 +1,14 @@
+@import '../../assets/styles/variables';
+
+.wrap {
+  display: flex;
+  justify-content: flex-end;
+  background: $black;
+  padding: 10px;
+}
+
+.link {
+  line-height: 50px;
+  color: $white;
+  cursor: pointer;
+}
