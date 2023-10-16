@@ -6095,31 +6095,31 @@ const _excluded = ["onClick", "relative", "reloadDocument", "replace", "state", 
   _excluded2 = (/* unused pure expression or super */ null && (["aria-current", "caseSensitive", "className", "end", "style", "to", "children"])),
   _excluded3 = (/* unused pure expression or super */ null && (["reloadDocument", "replace", "state", "method", "action", "onSubmit", "submit", "relative", "preventScrollReset"]));
 function createBrowserRouter(routes, opts) {
-  return router_createRouter({
-    basename: opts == null ? void 0 : opts.basename,
-    future: react_router_dom_dist_extends({}, opts == null ? void 0 : opts.future, {
-      v7_prependBasename: true
-    }),
-    history: router_createBrowserHistory({
-      window: opts == null ? void 0 : opts.window
-    }),
-    hydrationData: (opts == null ? void 0 : opts.hydrationData) || parseHydrationData(),
-    routes,
-    mapRouteProperties: mapRouteProperties
-  }).initialize();
-}
-function createHashRouter(routes, opts) {
   return createRouter({
     basename: opts == null ? void 0 : opts.basename,
     future: react_router_dom_dist_extends({}, opts == null ? void 0 : opts.future, {
       v7_prependBasename: true
     }),
-    history: createHashHistory({
+    history: createBrowserHistory({
       window: opts == null ? void 0 : opts.window
     }),
     hydrationData: (opts == null ? void 0 : opts.hydrationData) || parseHydrationData(),
     routes,
     mapRouteProperties: UNSAFE_mapRouteProperties
+  }).initialize();
+}
+function createHashRouter(routes, opts) {
+  return router_createRouter({
+    basename: opts == null ? void 0 : opts.basename,
+    future: react_router_dom_dist_extends({}, opts == null ? void 0 : opts.future, {
+      v7_prependBasename: true
+    }),
+    history: router_createHashHistory({
+      window: opts == null ? void 0 : opts.window
+    }),
+    hydrationData: (opts == null ? void 0 : opts.hydrationData) || parseHydrationData(),
+    routes,
+    mapRouteProperties: mapRouteProperties
   }).initialize();
 }
 function parseHydrationData() {
@@ -10867,7 +10867,7 @@ function Template(_ref) {
 
 function App(props) {
   console.log('1');
-  var router = createBrowserRouter([{
+  var router = createHashRouter([{
     path: '/',
     element: /*#__PURE__*/react.createElement(components_Template, {
       component: routes_List
