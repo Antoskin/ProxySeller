@@ -1,14 +1,17 @@
 {
-  "name": "progressive_form",
+  "name": "proxy-seller",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://Antoskin@bitbucket.org/Antoskin/progressive_form.git",
+  "repository": "https://github.com/Antoskin/proxy-seller",
+  "homepage": "https://antoskin.github.io/proxy-seller",
   "author": "Anton <antonliashok@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "webpack",
     "dev": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
@@ -19,6 +22,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
+    "gh-pages": "^6.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^5.5.3",
     "import-loader": "^1.0.1",

@@ -1,3 +1,27 @@
 $white: #fff;
 $black: #1c1b1b;
 
+$shadow1: 0 4px 5px 0 rgba(239, 16, 16, 0.53), 0 1px 10px 0 rgba(180, 18, 18, 0.54), 0 2px 4px -1px rgba(222, 28, 28, 0.48);
+$shadow2: 0 8px 17px 2px rgba(138, 39, 39, 0.14), 0 3px 14px 2px rgba(112, 27, 27, 0.12), 0 5px 5px -3px rgba(171, 19, 19, 0.2);
+
+$XS: 400px;
+$S: 576px;
+$M: 768px; // 0- 768 - mobile
+$L: 992px; // 768- 992 - tablet
+$XL: 1250px; // 992 - infinity - desktop
+$XXL: 1450px;
+
+$container-max-widths: (
+        sm: 576px,
+        md: 720px,
+        lg: 960px,
+        xl: 1200px
+);
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1250px,
+        xxl: 1450px
+);

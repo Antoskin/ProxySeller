@@ -3,8 +3,8 @@ import s from './Filter.module.scss';
 
 function Filter({onFilter}) {
     return (
-        <form onSubmit={e => e.preventDefault()}>
-            <input className={s.wrap} type="text" placeholder="Search name" onChange={onFilter} />
+        <form className={s.form} onSubmit={e => e.preventDefault()}>
+            <input className={s.input} type="text" placeholder="Search name" onChange={onFilter} />
         </form>
     );
 }

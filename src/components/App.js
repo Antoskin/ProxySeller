@@ -4,7 +4,8 @@ import List from "../routes/List";
 import Content from "../routes/Content";
 import Template from "./Template";
 
-function App(props) {
+function App() {
+
     const router = createHashRouter([
         {
             path: '/',

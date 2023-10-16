@@ -1,12 +1,16 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
+const path = require('path')
 
 
 module.exports = {
     devServer: { overlay: true },
     optimization: {
         minimize: false
+    },
+    output: {
+        path: path.resolve(__dirname, 'build'),
     },
     module: {
         rules: [
