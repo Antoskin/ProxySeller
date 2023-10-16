@@ -10866,6 +10866,7 @@ function Template(_ref) {
 
 
 function App(props) {
+  console.log('1');
   var router = createBrowserRouter([{
     path: '/',
     element: /*#__PURE__*/react.createElement(components_Template, {
