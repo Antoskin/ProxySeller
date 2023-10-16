@@ -6956,18 +6956,19 @@ function usePrompt(_ref8) {
 
 ;// CONCATENATED MODULE: ./src/components/Filter/Filter.module.scss
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const Filter_module = ({"wrap":"_1d6PcZxI9cMRjGqN-p8o7j"});
+/* harmony default export */ const Filter_module = ({"form":"_1W9leE6udUd58QLnRvx3r2","input":"_2qevzfBMbXGfxmvs5PytfW"});
 ;// CONCATENATED MODULE: ./src/components/Filter/Filter.js
 
 
 function Filter(_ref) {
   var onFilter = _ref.onFilter;
   return /*#__PURE__*/react.createElement("form", {
+    className: Filter_module.form,
     onSubmit: function onSubmit(e) {
       return e.preventDefault();
     }
   }, /*#__PURE__*/react.createElement("input", {
-    className: Filter_module.wrap,
+    className: Filter_module.input,
     type: "text",
     placeholder: "Search name",
     onChange: onFilter
@@ -10865,8 +10866,7 @@ function Template(_ref) {
 
 
 
-function App(props) {
-  console.log('1');
+function App() {
   var router = createHashRouter([{
     path: '/',
     element: /*#__PURE__*/react.createElement(components_Template, {
